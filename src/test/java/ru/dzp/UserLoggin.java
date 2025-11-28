@@ -14,7 +14,7 @@ public class UserLoggin {
     void openSite() {
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium()
-                    .launch(new BrowserType.LaunchOptions().setHeadless(false));
+                    .launch(new BrowserType.LaunchOptions().setHeadless(true));
 
             BrowserContext context = browser.newContext();
             Page page = context.newPage();
