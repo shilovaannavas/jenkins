@@ -2,6 +2,7 @@ package ru.dzp;
 
 import com.microsoft.playwright.*;
 import io.qameta.allure.Allure;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
@@ -9,6 +10,7 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 public class UserLoggin {
 
     @Test
+    @Tag("simple")
     void openSite() {
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium()
