@@ -26,7 +26,7 @@ public class UserLoggin {
             page.waitForLoadState();
 
             Allure.step("Проверяем текст", () -> {
-                assertThat(page.locator("body")).containsText("Мой текст");
+                assertThat(page.locator("body")).containsText("Вход");
             });
 
             Allure.step("Делаем скриншот", () -> {
